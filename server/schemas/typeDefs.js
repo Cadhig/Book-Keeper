@@ -1,6 +1,10 @@
 const typeDefs = `
+type RootQuery {
+test: String!
+}
+
 type Query {
-me: User!
+test: String!
 }
 
 type User {
