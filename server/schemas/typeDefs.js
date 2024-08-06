@@ -1,9 +1,6 @@
 const typeDefs = `
-type Query{
+type Query {
 me: User!
-}
-type Mutation {
-login:
 }
 
 type User {
