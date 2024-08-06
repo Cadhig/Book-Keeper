@@ -1,4 +1,4 @@
-import { db } from "../models/User"
+const db = require('../models/User')
 const resolvers = {
     Query: {
         user() {
