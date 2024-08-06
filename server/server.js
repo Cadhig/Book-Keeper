@@ -3,7 +3,10 @@ const path = require('path');
 const db = require('./config/connection');
 const routes = require('./routes');
 const { expressMiddleware } = require("@apollo/server/express4")
-
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
 const app = express();
 const PORT = process.env.PORT || 3001;
 const startApolloServer = async () => {
