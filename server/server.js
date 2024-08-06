@@ -9,9 +9,11 @@ const server = new ApolloServer({
   typeDefs
 });
 const app = express();
+const connectMongo = require('./config/connection')
 const PORT = process.env.PORT || 3001;
 const startApolloServer = async () => {
   await server.start();
+  app.use(connectMongo)
   app.use(express.urlencoded({ extended: true }));
   app.use(routes);
   app.use(express.json());
