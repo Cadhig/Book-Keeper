@@ -29,3 +29,5 @@ token: String!
 user: User
 }
 `
+
+module.exports = typeDefs
